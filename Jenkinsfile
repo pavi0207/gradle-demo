@@ -1,8 +1,11 @@
 pipeline {
     agent any
 
-    stages {
+    tools {
+        jdk 'jdk11'
+    }
 
+    stages {
         stage('Checkout') {
             steps {
                 checkout scm
